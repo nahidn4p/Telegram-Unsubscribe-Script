@@ -1,6 +1,9 @@
 # Requirement & How to
+
+**All credit goes to https://github.com/Kocoji/tel-buh-bye**
+
 - Clone this repo:
-  - `git clone https://github.com/Kocoji/tel-buh-bye.git`
+  - `git clone https://github.com/nahidn4p/Telegram-Unsubscribe-Script.git`
 - Python3 & Linux (I have not tested on Windows env)
 - Install the packages in the `requirements.txt` file 
   - `pip3 install -r requirements.txt`
@@ -12,7 +15,11 @@
 > - Click on Create application at the end. Remember that your API hash is secret and Telegram won’t let you revoke it. Don’t post it anywhere!
 - Create the env variable: 
   - E.g. `export API_ID='12345678' API_HASH='d0d46c372ff1f1522434951a2b3c4d'`
-  - Or, create the file include 2 vars: `API_ID='12345678' API_HASH='d0d46c372ff1f1522434951a2b3c4d'`, then, from the shell: type `. thefilename`
+  - Or,in Linux edit **.bashrc** or **.zshrc** and add these lines
+  -       export API_ID='12345678'
+  -       export API_HASH='d0d46c372ff1f1522434951a2b3c4d'
+  -   then type source **.bashrc** or **.zshrc**
+  -   for windows u can add those variable in environment variables.
 
 # Docker
 You can build the image that included in this source. E.g. `docker build . -t buhbye`
