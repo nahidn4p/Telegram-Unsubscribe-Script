@@ -43,7 +43,7 @@ async def getlist():
         async for dialog in client.iter_dialogs():
             if dialog.is_group or dialog.is_channel:
                 count += 1
-                with open(filename, "a") as file:
+                with open(filename, "a",encoding="utf-8") as file:
                     file.write(dialog.name + "\n")   
         typer.echo("Done! Found {} groups and channels!".format(count))
         if exists(filename):
