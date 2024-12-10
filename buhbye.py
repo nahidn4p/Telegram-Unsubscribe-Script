@@ -65,7 +65,7 @@ async def bye(force: bool = typer.Option(
     """
     if force:        
         try:
-            with open(filename) as file:
+            with open(filename,encoding="utf-8") as file:
                 whiteList = [line.rstrip() for line in file]
         except FileNotFoundError:
             whiteList = []
